@@ -1,0 +1,39 @@
+    body{        
+        background-color : black ; 
+        text-align: justify
+    }
+    h3{
+        color : yellow
+    }
+    h4{
+        color: white ;
+        text-align: right
+    }
+    p{
+        color : white
+    }
+    li,a{
+        color : white
+    }
+    th, td {
+        color: black;
+        width: 25%;
+        text-align: left;
+        vertical-align: top;
+        border: 1px solid #000;
+        border-color: yellow;
+        background: white;
+    }
+    img{
+        display: block;
+        margin: auto;
+        height: 200px;
+    }
+    footer{
+        position: relative;    
+        margin-top: 50px;
+        height: 20px;
+        padding:0px 0px;
+        background: yellow;
+        text-align: center;
+    }
