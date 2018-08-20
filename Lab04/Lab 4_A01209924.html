@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>LAB 4 - DAW</title>
+        <!--usando bootstrap-->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">  
+        <link href="css/custom.css" rel="stylesheet">
+    </head>
+    
+    <!--scroll: update links in navigation automatically-->
+    <body data-spy="scroll" data-target="#data-scrollspy">
+        <!--Pestañas de inicio con Bootstrap-->
+        <div class="container ">
+            <header class="py-4">
+                <h1 style="text-align: center">Desarrollo de aplicaciones web</h1>
+            </header>  
+            
+            <!--Static navbar con Bootstrap-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light rounded shadow">
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="../Lab02/Lab%202_A01209924.html">Home</a>
+						</li>
+						<li class="nav-item dropdown active">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Labs
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item active" href="../Lab04/Lab%204_A01209924.html">Lab 4</a>
+								<a class="dropdown-item" href="../Lab02/Lab%202_A01209924.html">Lab 3</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>  
+        </div> 
+        
+
+        <div class="container">
+            <header class="py-4">
+                <h3>Ejercicios Javascript</h3>
+            </header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light rounded shadow">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:table_power()">Prueba 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:add_random()">Prueba 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:test_3()">Prueba 3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:test_4()">Prueba 4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:test_5()">Prueba 5</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:test_6()">Prueba 6</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Espacio donde se muestran los resultados de los scripts-->
+            <div id="test_lab04" class="jumbotron mt-4 shadow"></div>
+        </div>
+        
+        <!--Cuestionario de la página-->
+        <div class="container" id="Cuestionario">
+            <header>
+                <h2>Cuestionario de Javascript</h2>
+            </header>
+            <div class="card mt-4 shadow">
+                <div class="card-body">
+                    <h4 class="card-title">¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h4>
+                    <p class="card-text">Ambos lenguajes manejan lo que es programación orientada objetos, y pueden ser corridos en un servidor web. Por otra parte, en cuanto a diferencias, JavaScript es un lenguaje para realizar scripts orientados a objetos. Java puede ser corrido en un compilador o en un navegador, JavaScript solo puede ser corrido dentro de un navegador, y principalmente sirve para hacer las paginas responsivas e interactivas.  </p>
+                </div>
+            </div>
+            <div class="card mt-4 shadow bg-info">
+                <div class="card-body">
+                    <h4 class="card-title">¿Qué métodos tiene el objeto Date?</h4>
+                    <li class="list-group-item text-dark"><code>getDate()</code><p class="card-text"></p>Devuelve el día del mes</li>
+                    <li class="list-group-item text-dark"><code>getDay()</code><p class="card-text"></p>Devuelve el día de la semana</li>
+                    <li class="list-group-item text-dark"><code>getFullYear()</code><p class="card-text"></p>Devuelve el año en números</li>
+                    <li class="list-group-item text-dark"><code>getHours()</code><p class="card-text"></p>Devuelve la hora en formato 24Hrs</li>
+                    <li class="list-group-item text-dark"><code>getMilliseconds()</code><p class="card-text"></p>Devuelve los milisegundos en un rango de 0 a 999.</li>
+                </div>
+            </div>
+            <div class="card mt-4 shadow bg-info">
+                <div class="card-body">
+                    <h4 class="card-title">¿Qué métodos tienen los arreglos?</h4>
+                    <li class="list-group-item text-dark"><code>toString()</code><p class="card-text"></p>Devuelve un string con todos los datos del arreglo</li>
+                    <li class="list-group-item text-dark"><code>pop()</code><p class="card-text"></p>Elimina el último item del arreglo</li>
+                    <li class="list-group-item text-dark"><code>push()</code><p class="card-text"></p>Agrega un elemento al arreglo al último</li>
+                    <li class="list-group-item text-dark"><code>shift()</code><p class="card-text"></p>Elimina el primer elemneto del arreglo y desplaza los demás</li>
+                    <li class="list-group-item text-dark"><code>unshift()</code><p class="card-text"></p>Agrega un item al inicio y recorre los demás</li>
+                </div>
+            </div>
+            <div class="card mt-4 shadow">
+                <div class="card-body">
+                    <h4 class="card-title">¿Cómo se declara una variable con alcance local dentro de una función?</h4>
+                    <p class="card-text">La variable se vuelve local al estar dentro del la función, con el parámetro let.</p>
+                </div>
+            </div>
+            <div class="card mt-4 shadow">
+                <div class="card-body">
+                    <h4 class="card-title">¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</h4>
+                    <p class="card-text">El valor de la variable después de modificarla se debe mantener para otras funciones del programa.</p>
+                </div>
+            </div>
+            <div class="card mt-4 shadow">
+                <div class="card-body">
+                    <h4 class="card-title">¿Qué método de String se puede utilizar para buscar patrones con expresiones regulares?¿Para qué podrías utilizar esto en una aplicación web?</h4>
+                    <p class="card-text">El método se llama <strong>search</strong>, este busca expresiones regulares dentro de un String, podría tener aplicación en aplicaciones que se basen en buscadores, catálogos, etc.</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        <!--Footer utilizando bootstrap-->
+        <footer class="bg-info text-white mt-4">
+            <div class="container-fluid py-4">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span class="text-warning">Realizado con <strong>Brackets</strong></span>
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3 text-right aligh-self-end">
+                       <strong>Marco Sebastian Aguilar Viera</strong>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+    <!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="../js/bootstrap.bundle.min.js"></script>
+		<script src="../js/smooth-scroll.js"></script>
+		<script src="../js/test_lab04.js"></script>
+
+    </body>
+</html>

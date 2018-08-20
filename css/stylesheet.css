@@ -1,19 +1,19 @@
     body{        
-        background-color : black; 
+        background-color : white; 
         text-align: justify
     }
     h3{
-        color : white;
+        color : gray;
     }
     h4{
-        color: white;
+        color: black;
         text-align: right
     }
     p{
-        color : white
+        color : black
     }
     li{
-        color : white
+        color : black
     }
     th, td {
         color: black;
