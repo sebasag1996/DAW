@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>LAB 5 - DAW</title>
+        <!--usando bootstrap-->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">  
+        <link href="https://cdn.jsdelivr.net/gh/atatanasov/gijgo@1.7.3/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    </head>
+    
+    <!--scroll: update links in navigation automatically-->
+    <body data-spy="scroll" data-target="#data-scrollspy">
+        <!--Pestañas de inicio con Bootstrap-->
+        <div class="container ">
+            <header class="py-4">
+                <h1 style="text-align: center">Desarrollo de aplicaciones web</h1>
+            </header>  
+            
+            <!--Static navbar con Bootstrap-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light rounded shadow">
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="../Lab02/Lab%202_A01209924.html">Home</a>
+						</li>
+						<li class="nav-item dropdown active">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Labs
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="../Lab04/Lab04_A01209924.html">Lab 4</a>
+								<a class="dropdown-item" href="../Lab02/Lab%202_A01209924.html">Lab 3</a>
+                                <a class="dropdown-item active" href="../Lab05/Lab05_A01209924.html">Lab 5</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>  
+        </div> 
+        
+        <!--Contenido de la pagina-->
+        <section id="content" class="container">
+            <header class="py-4">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <h2>Pruebas y Ejercicios</h2>
+                    </div>
+                </div>
+            </header>
+            <div class="row">
+                <div class="col-lg-9">
+                    
+                    <!--Menu de Javascript-->
+                    <article id="js_test" class="py-4 mt-4">
+                        <div class="row">
+                            <!--Password-->
+                            <div class="col">
+                                <a data-toggle="modal" href="#signUp">    
+                                    <div class="box">
+                                        <div class="px-3 py-3">
+                                            <h3>Validar Password</h3>
+                                            <p>Gadget para validar la entrada de un password</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        <!--Tienda box-->
+							<div class="col">
+								<a data-toggle="modal" href="#store">
+									<div class="box">
+										<div class="px-3 py-3">
+											<h3>Tienda en Línea</h3>
+											<p>Tienda en línea que actualiza el totoal dependiendo de la cantidad de artículos comprados.</p>
+										</div>
+									</div>
+								</a>
+							</div>
+                            <!--Plus-->
+							<div class="col">
+								<h3>Plus</h3>
+								   <p>Ingresa tu fecha de nacimiento (mm/dd/aaaa):</p>
+								   <input id="datepicker">
+								<div class="small" id="age" class="container-fluid"></div>
+							</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        
+        
+            <!--Sign-Up-->
+            <div id="signUp" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div style="padding:35px 50px;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4>Crear Cuenta</h4>
+                        </div>
+                        <div style="padding:40px 50px;">
+                            <form>
+                                <div class="form-group">
+                                    <label for="pwd">Nombre de usuario:</label>
+                                    <input type="text" class="form-control" id="name-reg-input">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Contraseña:</label>
+                                    <input id="pass1" type="password" class="form-control" onkeyup="compareFields()" data-toggle="tooltip" data-placement="right" title="La contraseña debe contener al menos 8 caracteres.">
+                                    <label for="pwd">Confirmar:</label>
+                                    <span>
+                                        <!--Texto segunda contraseña-->
+                                        <!--Texto segunda contraseña-->
+                                        <input id="pass2" type="password" class="form-control" onkeyup="compareFields()">
+                                        <!--Texto bajo las contraseñas-->
+                                        <div class="small" id="confirm-pass-match" class="container-fluid"></div>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Tienda-->
+            <div id="store" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <!--header para popup-->
+                        <div class="modal-header">
+                            <h5 class="modal-title">Tienda Online</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <!--divisiones de articulos por columnas-->
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="container-fluid">
+                                            <div>
+                                                <img src="../images/bose1.png" class="img-fluid img" alt="Responsive Image of JS">
+                                                <div class="container-fluid mt-3">
+                                                    <h4>SoundLink</h4>
+                                                    <p>Parlantes Bluetooth.</p>
+                                                    <p>$1200.00 MXN</p>
+                                                    <input id="q1" name="name" type="text" placeholder="0" class="form-control" onkeyup="quantity()">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="container-fluid">
+                                            <div>
+                                                <img src="../images/bose2.jpg" class="img-fluid img" alt="Responsive Image of JS">
+                                                <div>
+                                                    <h4>Portátil</h4>
+                                                    <p>Parlantes Bluetooth portátiles.</p>
+                                                    <p>$1400.00 MXN</p>
+                                                    <input id="q2" name="name" type="text" placeholder="0" class="form-control" onkeyup="quantity()">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="container-fluid">
+                                            <div >
+                                                <img src="../images/bose3.jpg" class="img-fluid img" alt="Responsive Image of JS">
+                                                <div class="container-fluid mt-3">
+                                                    <h4>Coloridos</h4>
+                                                    <p>Parlantes Bluetooth portátiles coloridos.</p>
+                                                    <p>$1100.00 MXN</p>
+                                                    <input id="q3" name="name" type="text" placeholder="0" class="form-control" onkeyup="quantity()">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row  mt-4">
+                            <div class="col-sm-6"></div>
+                            <div class="col">
+                                <p>Impuesto (16%):</p>
+                            </div>
+                            <div class="col">
+                                <span id="impuestos"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6"></div>
+                            <div class="col">
+                                <p>Precio Total:</p>
+                            </div>
+                            <div class="col">
+                                <span id="total"></span>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="row">
+                                <div class="col-sm-6"></div>
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary btn-lg">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Cuestionario-->
+            <article id="questions" class="py-4">
+                <header>
+                    <h2>Cuestionario</h2>
+                </header>
+            </article>
+            
+            <!--Preguntas-->
+            <!--hace un box en el texto-->
+            <div class="card mt-4 shadow">
+                <div class="card-body">
+                    <h4 class="card-title">¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</h4>
+                    <p id="card_hover" class="card-text">Es responsivamente más rapido, la funcionalidad seria la misma pero la velocidad es mejor con js.</p>
+                </div>
+            </div>
+            <div class="card mt-4 shadow">
+                <div class="card-body">
+                    <h4 class="card-title">¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</h4>
+                    <p id="card_hover" class="card-text">Anulando el JavaScript en el navegador.</p>
+                </div>
+            </div>
+            <div class="card mt-4 shadow">
+                <div class="card-body">
+                    <h4 class="card-title">Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</h4>
+                    <p id="card_hover" class="card-text">Porque es más amigable con el usuario, sin embargo al saltarse igual se valida en el servidor.</p>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        <!--Footer utilizando bootstrap-->
+        <footer class="bg-info text-white mt-4">
+            <div class="container-fluid py-4">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span class="text-warning">Realizado con <strong>Brackets</strong></span>
+                    </div>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3 text-right aligh-self-end">
+                       <strong>Marco Sebastian Aguilar Viera</strong>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="../js/bootstrap.bundle.min.js"></script>
+		<script src="../js/smooth-scroll.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/atatanasov/gijgo@1.7.3/dist/combined/js/gijgo.min.js" type="text/javascript"></script>
+        <script src="../js/test_lab04.js"></script>
+        <script src="../js/validator.js"></script>
+       <!-- Header con dificultades
+        <script src="../js/header.js"></script>
+        -->
+
+    </body>
+</html>
+        

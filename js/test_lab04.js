@@ -1,10 +1,6 @@
-$(document).ready(function () {
-	$('[data-toggle="tooltip"]').tooltip()
-}); 
-
 //Prueba 1
 function table_power() {
-	var n = parseInt(window.prompt("Ingresa un número", "1"));
+	var n = parseInt(window.prompt("Dame un número", "1"));
 	var str = "<h3 class='mb-3'>Prueba 1</h3><table class='table table-hover'>";
 	str += "<tr><th>n</th><th>n^2</th><th>n^3</th></tr>";
 	for (i=1; i<=n; i++) {
