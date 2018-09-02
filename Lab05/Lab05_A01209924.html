@@ -5,8 +5,26 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <title>LAB 5 - DAW</title>
+        
+        <!--Js para drag and drop-->
+        <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+        </script>
         <!--usando bootstrap-->
         <link href="../css/bootstrap.min.css" rel="stylesheet">  
+        <link href="../css/custom.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/gh/atatanasov/gijgo@1.7.3/dist/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     </head>
     
@@ -30,16 +48,17 @@
 								Labs
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="../Lab02/Lab%202_A01209924.html">Lab 3</a>
 								<a class="dropdown-item" href="../Lab04/Lab04_A01209924.html">Lab 4</a>
-								<a class="dropdown-item" href="../Lab02/Lab%202_A01209924.html">Lab 3</a>
-                                <a class="dropdown-item active" href="../Lab05/Lab05_A01209924.html">Lab 5</a>
+                                <a class="dropdown-item active" href="../Lab05/Lab05_A01209924.html">Lab 5 y 6</a>
+                                <a class="dropdown-item" href="../Lab07/Lab07_A01209924.html">Lab 7</a>
 							</div>
 						</li>
 					</ul>
 				</div>
 			</nav>  
         </div> 
-        
+        <img class="watermark" src="../ezreal.png" alt="ezreal"> 
         <!--Contenido de la pagina-->
         <section id="content" class="container">
             <header class="py-4">
@@ -225,6 +244,47 @@
                     </div>
                 </div>
             </div>
+            
+            <!--Laboratorio 6-->
+            <article id="letras" class="py-4">
+                <header>
+                    <h2>Cuestionario 6 (Font change)</h2>
+                </header>
+            </article>
+            <section id="font">
+                <div class="card mt-4 shadow">
+                    <div class="card-text">
+                        <ul class="card-text">
+                            <li><em>static:</em> los elementos aparecen en el orden del documento.</li>
+                            <li><em>absolute:</em> el elemento es posicionado respecto a su primer ancestro no estático (static).</li>
+                            <li><em>fixed:</em> el elemento es posicionado respecto a la ventana.</li>
+                            <li><em>relative:</em> el elemento es posicionado respecto a su posición normal.</li>
+                            <li><em>sticky:</em> el elemento es posicionado respecto a la posición del scroll del usuario.</li>
+                            <li><em>initial:</em> configura a default (visible).</li>
+                            <li><em>inherit:</em> heredar propiedad del elemento padre.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mt-4 shadow">
+                    <div class="card-body">
+                        <h4 class="card-title">¿Cuáles son los valores estándar para la propiedad visibility?</h4>
+                        <ul class="card-text">
+							<li><em>visible:</em> el elemento es visible (Valor Estándar).</li>
+							<li><em>hidden:</em> el elemento es invisible y ocupa espacio.</li>
+							<li><em>collapse:</em> para tablas. Esconde filas o columnas sin afectar la tabla.</li>
+							<li><em>initial:</em> configura a default (visible).</li>
+							<li><em>inherit:</em> heredar propiedad del elemento padre.</li>
+				        </ul>
+                    </div>
+                </div>
+                <div class="card mt-4 shadow">
+                    <div class="card-body">
+                        <h4 class="card-title">¿Qué es el zIndex y para qué sirve?</h4>
+                        <p class="card-text">Especifica el orden en que aparecen los elementos en pantalla al estar unos sobre otros</p>
+                    </div>
+                </div>
+            </section>
+            
             <!--Cuestionario-->
             <article id="questions" class="py-4">
                 <header>
@@ -252,8 +312,21 @@
                     <p id="card_hover" class="card-text">Porque es más amigable con el usuario, sin embargo al saltarse igual se valida en el servidor.</p>
                 </div>
             </div>
+            <p class="card-text">Arrastra la imagen al recuadro</p>
+            <div class="row">
+                <div class="col mt-6">
+                    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="col mt-6">
+                    <img id="drag1" src="../ezreal.png" draggable="true" ondragstart="drag(event)" width="100" height="69">
+                </div>
+            </div>
+            <p>Haz click en el boton para observar el funcionamiento de los timers de js (cada 10s)</p>
+            <button onclick="alarm()"  type="button" class="btn btn-primary">Timer</button>
+            
         </section>
         
+
         
         
         <!--Footer utilizando bootstrap-->

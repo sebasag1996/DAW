@@ -169,3 +169,7 @@ function test_6_out() {
 	
 	return false;
 }
+function alarm(){
+    setInterval(function(){alert("Hecho por Marco Aguilar");},10000);
+    document.getElementById('alarm').innerHTML = alarm;
+}
