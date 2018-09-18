@@ -1,0 +1,82 @@
+<article id="tests" class="py-4">
+						<header>
+							<h2>Ejercicios</h2>
+							<h5 class="px-3"> de PHP</h5>
+						</header>
+
+						<div class="card-deck py-4">
+							<div class="card shadow">
+                                <div class="card-body">
+									<h5 class="card-title">Media</h5>
+                                    <p class="card-text">Prueba 1: <?php print_array($test_1)?>. Media: <?php echo media($test_1)?></p>
+                                    <p class="card-text">Prueba 2: <?php print_array($test_2)?>. Media: <?php echo media($test_2)?></p>
+								</div>
+							</div>
+
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title">Mediana</h5>
+                                    <p class="card-text">Prueba 1: <?php print_array($test_1)?>. Mediana: <?php echo mediana($test_1)?></p>
+                                    <p class="card-text">Prueba 2: <?php print_array($test_2)?>. Mediana: <?php echo mediana($test_2)?></p>
+                                </div>
+                            </div>
+
+						</div>
+
+                        <div class="card-deck py-4">
+							<div class="card shadow">
+                                <div class="card-body">
+									<h5 class="card-title">Ordenar y Formatear</h5>
+                                    <p class="card-text">Prueba 1: <?php print_array($test_1)?></p>
+                                    <?php listas($test_1);?>
+                                    <p class="card-text">Prueba 2: <?php print_array($test_2)?></p>
+                                    <?php listas($test_2);?>
+								</div>
+							</div>
+
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title">Potencias</h5>
+                                    <?php potencias(5); ?>
+                                </div>
+                            </div>
+
+						</div>
+
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <h5 class="card-title">Area del círculo</h5>
+                                <p class="card-text">Radio: 5cm. Área: <?php echo area_circulo(5);?>cm^2.</p>
+                            </div>
+                        </div>
+
+
+
+
+					</article>
+
+					<article id="questions" class="py-4">
+						<header>
+							<h2>Preguntas</h2>
+							<h5 class="px-3">...y respuestas</h5>
+						</header>
+
+						<div class="card mt-4 shadow">
+							<div class="card-body">
+								<h4 class="card-title">¿Qué hace la función <code>phpinfo()</code>? Describe y discute 3 datos que llamen tu atención.<sub><small>[1]</small></sub></h4>
+								<p class="card-text">La función <code>phpinfo()</code> despliega información de la configuración de PHP. Entre los datos que me llaman la atención está la versión instalada de Apache, que permite saber que vulnerabilidades presenta el sistema. También destaca la información del sistema que puede ser relevante al montar el servicio en un servidor de producción. Finalmente, es importante notar la versión de PHP que nos permite saber que funciones y librerias nativas tenemos disponibles.</p>
+							</div>
+						</div>
+                        <div class="card mt-4 shadow">
+                            <div class="card-body">
+                                <h4 class="card-title">¿Qué cambios tendrías que hacer en la configuración del servidor para que pudiera ser apto en un ambiente de producción?<sub><small>[2]</small></sub></h4>
+                                <p class="card-text">Ya que la principal diferencia entre un ambiente de producción y uno de prueba es la seguridad, en primer lugar hay que restringir el acceso a los usuarios autorizados. También hay que limitar el control a administradores del sistema.</p>
+                            </div>
+                        </div>
+                        <div class="card mt-4 shadow">
+                            <div class="card-body">
+                                <h4 class="card-title">¿Cómo es que si el código está en un archivo con código html que se despliega del lado del cliente, se ejecuta del lado del servidor? Explica.<sub><small>[3]</small></sub></h4>
+                                <p class="card-text">El código es generado por un servidor que le envía el archivo con únicamente código HTML. PHP contiene funciones que "hacen algo" y posteriormente envían la información ya procesada al usuario. Estas funciones se ejecutan en el servidor, no en el lado del cliente.</p>
+                            </div>
+                        </div>
+					</article>
