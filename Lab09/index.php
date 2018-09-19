@@ -7,7 +7,7 @@
         echo $array[0];
         for ($i = 1; $i < sizeof($array); $i++)
         {
-            echo ", "$array[$i];
+            echo ", $array[$i]";
         }
     }
 
@@ -16,7 +16,7 @@
         for ($i = 0; $i < sizeof($array); $i++){
             $average = $average + $array[$i];
         }
-        echo "el promedio es: ".$average;
+        echo "el promedio es: $average";
     }
 
     function mediana($array) {
