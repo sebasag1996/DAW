@@ -1,0 +1,34 @@
+
+					<article id="questions" class="py-4">
+						<header>
+							<h2>Preguntas</h2>
+							<h5 class="px-3">...y respuestas</h5>
+						</header>
+
+						<div class="card mt-4 shadow">
+							<div class="card-body">
+								<h4 class="card-title">¿Por qué es una buena práctica separar el controlador de la vista? </h4>
+								<p class="card-text">Porque disminuye la complekidad de código y permite reusabilidad del mismo.</p>
+							</div>
+						</div>
+                        <div class="card mt-4 shadow">
+                            <div class="card-body">
+                                <h4 class="card-title">Aparte de los arreglos $_POST y $_GET, ¿qué otros arreglos están predefinidos en php y cuál es su función?</h4>
+                                <p class="card-text"><code>$_FILES</code>: array de archivos subidos con el método <code>POST</code></p>
+                                <p class="card-text"><code>$_REQUEST</code>: almacena información sobre la forma recibida</p>
+                            </div>
+                        </div>
+                        <div class="card mt-4 shadow">
+                            <div class="card-body">
+                                <h4 class="card-title">Explora las funciones de php, y describe 2 que no hayas visto en otro lenguaje y que llamen tu atención.</h4>
+                                <p class="card-text"><code>htmlspecialchars()</code>: convierte los caracteres especiales de html a texto plano para que no altere el funcionamiento de la página.</p>
+                                <p class="card-text"><code>stripslashes()</code>: remueve los backslashes ('\') del texto al que se aplique la función.</p>
+                            </div>
+                        </div>
+                        <div class="card mt-4 shadow">
+                            <div class="card-body">
+                                <h4 class="card-title">¿Qué es XSS y cómo se puede prevenir?</h4>
+                                <p class="card-text">Es un tipo de vulnerabilidad de seguridad encontrada en aplicaciones web. Esta busca insertar scripts a la pagina desde el lado del cliente a páginas vistas por otros usuarios. Esto se previene validando los valores de entrada con funciones como <code>htmlspecialchars()</code> y <code>stripslashes()</code></p>
+                            </div>
+                        </div>
+					</article>
