@@ -30,6 +30,12 @@
     
     <!--scroll: update links in navigation automatically-->
     <body data-spy="scroll" data-target="#data-scrollspy">
+        
+        <?php if (isset($_SESSION["email"])): ?>
+        <div class="right-align"><strong><?=$_SESSION["email"]?> | </strong> 
+        <a href="../Lab13/logout_controller.php">Salir</a></div>
+        <?php endif; ?>
+        
         <!--Pestañas de inicio con Bootstrap-->
         <div class="container ">
             <header class="py-4">
@@ -52,7 +58,8 @@
 								<a class="dropdown-item" href="../Lab04/Lab04_A01209924.html">Lab 4</a>
                                 <a class="dropdown-item" href="../Lab05/Lab05_A01209924.html">Lab 5 y 6</a>
                                 <a class="dropdown-item" href="../Lab07/Lab07_A01209924.html">Lab 7</a>
-                                <a class="dropdown-item active" href="../Lab09/index.php">Lab 9</a>
+                                <a class="dropdown-item" href="../Lab09/index.php">Lab 9</a>
+                                <a class="dropdown-item active" href="../Lab011/index.php">Lab 11</a>
 							</div>
 						</li>
 					</ul>
